@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Wordle   (Hiragana - 3 Letters)</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+
+    <img src="logo news.png" alt="logo" />
+    <h1>日本語 Wordle </h1>
+    <p>Welcome to the Japanese 3 letters Wordle Game!</p>
+    <div class="grid">
+        <!-- 3 rows for guesses -->
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div>
+    </div>
+
+    <br>
+    <input type="text" id="guess-input" maxlength="3" placeholder="Enter 3 letters in hiragana">
+
+    <button onclick="submitGuess()">Submit</button>
+
+    <h2>Thanks for playing!</h2>
+
+    <script src="wordle.js"></script> <!-- Link to external JS file -->
+</body>
+</html>

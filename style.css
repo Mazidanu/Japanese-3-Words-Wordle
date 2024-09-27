@@ -1,0 +1,61 @@
+/* style.css */
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #493b37;
+    color: #f7e9e9;
+    margin: 0;
+    background: linear-gradient(
+        to right, 
+        #e4d6d1 33.33%,  /* Blue for the left third */
+        #332f2e 33.33%,  /* Green for the middle third */
+        #332f2e 66.66%,  /* Continue green for consistency */
+        #e4d6d1 66.66%   /* Orange for the right third */
+    );
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 50px); /* 3 letters in a row */
+    grid-gap: 10px;
+}
+
+.grid div {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #dbcdcd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.correct {
+    background-color: rgb(99, 161, 84);
+    color: rgb(235, 223, 218);
+}
+
+.wrong-position {
+    background-color: rgb(216, 216, 89);
+    color: rgb(49, 42, 40);
+}
+
+.incorrect {
+    background-color: rgb(141, 115, 115);
+    color: rgb(240, 215, 215);
+}
+
+img {
+    width: 95px; /* Set width to 300 pixels */
+    height: auto; /* Maintain aspect ratio */
+}
+
+img {
+    margin-top: 0px; /* Space above the image */
+    margin-bottom: 0px; /* Space below the image */
+}
