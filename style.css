@@ -1,22 +1,58 @@
 /* style.css */
 
 body {
-    font-family: 'Times New Roman', Times, serif, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Change to min-height */
     flex-direction: column;
-    background-color: #493b37;
-    color: #f7e9e9;
+    background-color: #817976;
+    color: #352a2a;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+}
+
+
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center; /* Center the text */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
     margin: 0;
-    background: linear-gradient(
-        to right, 
-        #e4d6d1 33.33%,  /* Blue for the left third */
-        #332f2e 33.33%,  /* Green for the middle third */
-        #332f2e 66.66%,  /* Continue green for consistency */
-        #e4d6d1 66.66%   /* Orange for the right third */
-    );
 }
 
 .grid {
@@ -28,13 +64,42 @@ body {
 .grid div {
     width: 50px;
     height: 50px;
-    border: 2px solid #dbcdcd;
+    border: 2px solid #292727;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
 }
 
+#hiragana-keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hiragana-key {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    padding: 10px 20px;
+    margin: 1.5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hiragana-key:hover {
+    background-color: #998181;
+}
+
+#clear-guess {
+    background-color: rgb(117, 29, 29);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
 .correct {
     background-color: rgb(99, 161, 84);
     color: rgb(235, 223, 218);
@@ -50,12 +115,26 @@ body {
     color: rgb(240, 215, 215);
 }
 
-img {
-    width: 95px; /* Set width to 300 pixels */
-    height: auto; /* Maintain aspect ratio */
+/* Add this to your style.css file */
+.success-section {
+    background-color: #f0f8ff; /* Light blue background */
+    border: 2px solid #add8e6; /* Light blue border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the box */
+    margin: 20px auto; /* Center the box and add margin */
+    max-width: 600px; /* Limit the width of the box */
+    text-align: center; /* Center the text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    font-family: 'Lilita One', cursive; /* Ensure it matches the game font */
 }
 
-img {
-    margin-top: 0px; /* Space above the image */
-    margin-bottom: 0px; /* Space below the image */
+.success-section h2 {
+    color: #333; /* Dark text for the title */
+    font-size: 1.8em;
 }
+
+.success-section p {
+    color: #555; /* Slightly lighter text for paragraphs */
+    font-size: 1.2em;
+}
+
