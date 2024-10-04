@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese Wordle   (Hiragana - 3 Letters)</title>
+
+    <title>Japanese 3 letters wordle</title>
+    <meta name="author" content="Mazidanu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
 <body>
 
-    <img src="logo news.png" alt="logo" />
-    <h1>日本語 Wordle </h1>
-    <p>Welcome to the Japanese 3 letters Wordle Game!</p>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Welcome to the Game!</h2>
+            <p>The Hiragana Wordle game is a word-guessing game where players attempt to guess a fixed three-letter Japanese word represented in Hiragana. Players have a limited number of attempts to guess the correct word, and the game provides feedback on each guess to help them succeed.
+            </p>
+            <p>Players enter their guesses using either a text input field or a virtual Hiragana keyboard displayed on the screen.</p>
+            <p>Once the player has entered a guess (a three-letter Hiragana word), click a "Submit" button to check their guess.</p>
+            <p>Inspired by the popular Wordle created by the original creator of Wordle, Josh Wardle from New York Times!</p>
+        </div>
+    </div>
+
+    <br>
+    <h1>日本語 WORDLE </h1>
+    <h3>Welcome to the Japanese 3 letters Wordle Game!</h3>
     <div class="grid">
         <!-- 3 rows for guesses -->
         <div></div><div></div><div></div>
@@ -21,10 +38,88 @@
     <br>
     <input type="text" id="guess-input" maxlength="3" placeholder="Enter 3 letters in hiragana">
 
+    <!-- Hiragana keyboard -->
+    <div id="hiragana-keyboard">
+        <button class="hiragana-key">あ</button>
+        <button class="hiragana-key">い</button>
+        <button class="hiragana-key">う</button>
+        <button class="hiragana-key">え</button>
+        <button class="hiragana-key">お</button>
+        <button class="hiragana-key">か</button>
+        <button class="hiragana-key">き</button>
+        <button class="hiragana-key">く</button>
+        <button class="hiragana-key">け</button>
+        <button class="hiragana-key">こ</button>
+        <button class="hiragana-key">さ</button>
+        <button class="hiragana-key">し</button>
+        <button class="hiragana-key">す</button>
+        <button class="hiragana-key">せ</button>
+        <button class="hiragana-key">そ</button>
+        <button class="hiragana-key">た</button>
+        <button class="hiragana-key">ち</button>
+        <button class="hiragana-key">つ</button>
+        <button class="hiragana-key">て</button>
+        <button class="hiragana-key">と</button>
+        <button class="hiragana-key">な</button>
+        <button class="hiragana-key">に</button>
+        <button class="hiragana-key">ぬ</button>
+        <button class="hiragana-key">ね</button>
+        <button class="hiragana-key">の</button>
+        <button class="hiragana-key">は</button>
+        <button class="hiragana-key">ひ</button>
+        <button class="hiragana-key">ふ</button>
+        <button class="hiragana-key">へ</button>
+        <button class="hiragana-key">ほ</button>
+        <button class="hiragana-key">ま</button>
+        <button class="hiragana-key">み</button>
+        <button class="hiragana-key">む</button>
+        <button class="hiragana-key">め</button>
+        <button class="hiragana-key">も</button>
+        <button class="hiragana-key">ら</button>
+        <button class="hiragana-key">り</button>
+        <button class="hiragana-key">る</button>
+        <button class="hiragana-key">れ</button>
+        <button class="hiragana-key">ろ</button>
+        <button class="hiragana-key">や</button>
+        <button class="hiragana-key">ゆ</button>
+        <button class="hiragana-key">よ</button>
+        <button class="hiragana-key">わ</button>
+        <button class="hiragana-key">を</button>
+        <button class="hiragana-key">ん</button>
+        <button class="hiragana-key">が</button>
+        <button class="hiragana-key">ぎ</button>
+        <button class="hiragana-key">ぐ</button>
+        <button class="hiragana-key">げ</button>
+        <button class="hiragana-key">ご</button>
+        <button class="hiragana-key">ざ</button>
+        <button class="hiragana-key">じ</button>
+        <button class="hiragana-key">ず</button>
+        <button class="hiragana-key">ぜ</button>
+        <button class="hiragana-key">ぞ</button>
+        <button class="hiragana-key">だ</button>
+        <button class="hiragana-key">ぢ</button>
+        <button class="hiragana-key">づ</button>
+        <button class="hiragana-key">で</button>
+        <button class="hiragana-key">ど</button>
+        <button class="hiragana-key">ば</button>
+        <button class="hiragana-key">び</button>
+        <button class="hiragana-key">ぶ</button>
+        <button class="hiragana-key">べ</button>
+        <button class="hiragana-key">ぼ</button>
+        <!-- Add more Hiragana characters as needed -->
+        <button id="clear-guess">Clear</button>
+    </div>
+
     <button onclick="submitGuess()">Submit</button>
 
     <h2>Thanks for playing!</h2>
 
     <script src="wordle.js"></script> <!-- Link to external JS file -->
+
+    <div class="credits text-secondary text-center text-md-start mt-2 fs-7">
+        Feedback can be sent to <a href="https://x.com/mazidanu" class="link-secondary text-decoration-none">Mazidanu</a> <span class="text-primary">&#9829;</span>
+      </div>
+
+    
 </body>
 </html>
